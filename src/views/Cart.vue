@@ -1,16 +1,19 @@
 <template>
 <div>
   <h1>Your Cart</h1>
-  <ProductList :products="cart" />
+  <div>
+    <p v-if="cart.length == 0">Cart is empty</p>
+  </div>
+  <Cart :products="cart" />
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import Cart from "../components/CartList.vue"
 export default {
   name: 'Browse',
   components: {
-    ProductList
+    Cart
   },
   data() {
     return {

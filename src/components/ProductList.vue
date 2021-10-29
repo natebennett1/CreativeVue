@@ -12,7 +12,7 @@
       <div class="price">
         <h2>{{product.price}}</h2>
         <!-- add a function that pushes this button to the cart array -->
-        <button class="auto" @click="addtoCart">Add to Cart</button>
+        <button class="auto" @click="addtoCart(product)">Add to Cart</button>
       </div>
     </div>
   </div>
@@ -26,8 +26,9 @@ export default {
     products: Array
   },
   methods: {
-      addtoCart() {
-          this.$root.$data.cart.push(this.product);
+      addtoCart(product) {
+          this.$root.$data.cart.push(product);
+          product.quantity = 1;
       }
   }
 }
