@@ -1,23 +1,51 @@
 <template>
 <div class="wrapper">
   <div class="products">
-    <div class="product" v-for="product in products" :key="product.id">
+    <table id=playerTable>
+      <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Team</th>
+          <th>Total Points</th>
+         </tr>
+       </thead>
+         <tbody>
+          <tr v-for="product in products" :key="product.id">
+          <div class="imageContainer">
+           <td class="image">
+             <img :src="'/images/products/'+product.image">
+           </td>
+           </div>
+           <td>{{product.name}}</td>
+           <td>{{product.Position}}</td>
+           <td>{{product.Team}}</td>
+           <td>{{product.Stat}}</td>
+          </tr>
+         </tbody>
+       <!-- <div class="product" v-for="product in products" :key="product.id"> -->
+    </table>    
+    <!-- <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
         <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
+        <p>{{product.position}}</p>
       </div>
       <div class="image">
         <img :src="'/images/products/'+product.image">
       </div>
       <div class="price">
-        <h2>{{product.price}}</h2>
-        <!-- add a function that pushes this button to the cart array -->
-        <button class="auto" @click="addtoCart(product)">Add to Cart</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2>{{product.stat}}</h2>
+        <h2>{{product.team}}</h2>
+        add a function that pushes this button to the cart array -->
+  <!-- <button class="auto" @click="addtoCart(product)">Add to Cart</button>
+      </div> -->
+      
+    <!-- </div> -->
+  </div> 
+</div> 
 </template>
+
 
 <script>
 export default {
@@ -58,6 +86,24 @@ export default {
   border: 2px solid #333;
   height: 250px;
   width: 200px;
+  object-fit: cover;
+}
+
+.imageContainer img{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+  border: 2px solid #333;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.image{
+  border: 2px solid #333;
+  height: 50px;
+  width: 50px;
+  margin-left: 50px;
   object-fit: cover;
 }
 

@@ -10,7 +10,7 @@
       <router-link to="/browse">
         <div class="menu-item browse">
           <img src="/images/globe.png">
-          <p>Browse</p>
+          <p>Updating?</p>
         </div>
       </router-link>
       <router-link to="/cart">
