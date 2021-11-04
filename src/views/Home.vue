@@ -63,4 +63,8 @@ input {
   width: 100%;
   height: 40px;
 }
+i {
+  width: 35px;
+  background-color: darkgrey;
+}
 </style>
