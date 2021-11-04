@@ -16,7 +16,7 @@
       <router-link to="/cart">
         <div class="menu-item">
           <img src="/images/love.png">
-          <p> {{cartLength}} items</p>
+          <p>Your team ({{this.$root.$data.cart.length}} players)</p>
         </div>
       </router-link>
     </div>
@@ -56,7 +56,7 @@ export default {
 
 body {
   margin: 50px 100px;
-
+  background-color: #e6dfdf;
 }
 
 #menu {

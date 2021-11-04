@@ -3,7 +3,7 @@ let mock = [{
     name: "Patrick Mahomes",
     Position: "Quarterback",
     Team: "Kansas City",
-    Stat: "206.9",
+    Stat: 206.9,
     image: 'mahomes.jpg'
   },
   {
@@ -11,21 +11,21 @@ let mock = [{
     name: "Josh Allen",
     Position: "Quarterback",
     Team: "Buffalo",
-    Stat: "188.8",
+    Stat: 188.8,
     image: 'allen.jpg' },
   {
     id: 3,
     name: "Lamar Jackson",
     Position: "Quarterback",
     Team: "Baltimore",
-    Stat: "180.2",
+    Stat: 180.2,
     image: 'lamar.jpg'
   },
   {
     name: "Aaron Rodgers",
     Position: "Quarterback",
     Team: "Green Bay",
-    Stat: "175.7",
+    Stat: 175.7,
     image: 'aaron.jpeg'
   },
   {
@@ -33,7 +33,7 @@ let mock = [{
     name: "Matthew Stafford",
     Position: "Quarterback",
     Team: "LA Rams",
-    Stat: "170.4",
+    Stat: 170.4,
     image: 'stafford.jpg'
   },
   {
@@ -41,7 +41,7 @@ let mock = [{
     name: "Derrick Henry",
     Position: "Running Back",
     Team: "Tennessee",
-    Stat: "280.4",
+    Stat: 280.4,
     image: 'henry.jpg'
   },
   {
@@ -49,7 +49,7 @@ let mock = [{
     name: "Alvin Kamara",
     Position: "Running Back",
     Team: "New Orleans",
-    Stat: "24o.2",
+    Stat: 240.2,
     image: 'kamara.jpg'
   },
   {
@@ -57,7 +57,7 @@ let mock = [{
     name: "Nick Chubb",
     Position: "Running Back",
     Team: "Cleveland",
-    Stat: "212.5",
+    Stat: 212.5,
     image: 'chubb.jpg'
   },
   {
@@ -65,7 +65,7 @@ let mock = [{
     name: "Dalvin Cook",
     Position: "Running Back",
     Team: "Minnesota",
-    Stat: "202.3",
+    Stat: 202.3,
     image: 'cook.jpg'
   },
   {
@@ -73,7 +73,7 @@ let mock = [{
     name: "Aaron Jones",
     Position: "Running Back",
     Team: "Green Bay",
-    Stat: "193.2",
+    Stat: 193.2,
     image: 'aaronjones.jpg'
   },
   {
@@ -81,7 +81,7 @@ let mock = [{
     name: "Davantae Adams",
     Position: "Wide Receiver",
     Team: "Green Bay",
-    Stat: "193.2",
+    Stat: 193.2,
     image: 'adams.jpg'
   },
   {
@@ -89,7 +89,7 @@ let mock = [{
     name: "Tyreek Hill",
     Position: "Wide Receiver",
     Team: "Kansas City",
-    Stat: "190.2",
+    Stat: 190.2,
     image: 'tyreek.jpg'
   },
   {
@@ -97,7 +97,7 @@ let mock = [{
     name: "Deandre Hopkins",
     Position: "Wide Receiver",
     Team: "Arizona",
-    Stat: "187.4",
+    Stat: 187.4,
     image: 'hopkins.jpg'
   },
   {
@@ -105,7 +105,7 @@ let mock = [{
     name: "A.J. Brown",
     Position: "Wide Receiver",
     Team: "Tennessee",
-    Stat: "176.2",
+    Stat: 176.2,
     image: 'AJ.jpg'
   },
   {
@@ -113,7 +113,7 @@ let mock = [{
     name: "Cooper Kupp",
     Position: "Wide Receiver",
     Team: "LA Rams",
-    Stat: "144.3",
+    Stat: 144.3,
     image: 'kupp.jpg'
   },
   {
@@ -121,7 +121,7 @@ let mock = [{
     name: "Rodrigo Blankenship",
     Position: "Kicker",
     Team: "Indianapolis",
-    Stat: "88.4",
+    Stat: 88.4,
     image: 'blankenship.jpg'
   },
   {
@@ -129,7 +129,7 @@ let mock = [{
     name: "Mason Crosby",
     Position: "Kicker",
     Team: "Green Bay",
-    Stat: "84.4",
+    Stat: 84.4,
     image: 'crosby.jpg'
   },
   {
@@ -137,7 +137,7 @@ let mock = [{
     name: "Justin Tucker",
     Position: "Kicker",
     Team: "Baltimore",
-    Stat: "81.2",
+    Stat: 81.2,
     image: 'tucker.jpg'
   },
   {
@@ -145,7 +145,7 @@ let mock = [{
     name: "Matt Prater",
     Position: "Kicker",
     Team: "Arizona",
-    Stat: "74.3",
+    Stat: 74.3,
     image: 'Prater.jpg'
   },
   {
@@ -153,7 +153,7 @@ let mock = [{
     name: "Randy Bullock",
     Position: "Kicker",
     Team: "Tennessee",
-    Stat: "72.9",
+    Stat: 72.9,
     image: 'bullock.jpg'
   },
 

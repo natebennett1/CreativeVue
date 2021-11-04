@@ -9,6 +9,7 @@
           <th>Position</th>
           <th>Team</th>
           <th>Total Points</th>
+          <th>Add to Team</th>
          </tr>
        </thead>
          <tbody>
@@ -22,6 +23,9 @@
            <td>{{product.Position}}</td>
            <td>{{product.Team}}</td>
            <td>{{product.Stat}}</td>
+           <td>
+             <button class="auto" @click="addtoCart(product)">Pickup</button>
+           </td>
           </tr>
          </tbody>
        <!-- <div class="product" v-for="product in products" :key="product.id"> -->
@@ -55,8 +59,22 @@ export default {
   },
   methods: {
       addtoCart(product) {
+          // this.$root.$data.cart.forEach(product => {
+          //   if (.10px.position === this.$root.$data.cart.product.position) {
+          //     window.alert("You already have this position")
+          //     return;
+          //   }
+          // });
+          for(let i = 0; i < this.$root.$data.cart.length; i++){
+            console.log(product.Position);
+            console.log(product);
+            console.log(this.$root.$data.cart[i].Position);
+            if (product.Position === this.$root.$data.cart[i].Position) {
+               window.alert("You already have this position")
+               return;
+            }
+          }
           this.$root.$data.cart.push(product);
-          product.quantity = 1;
       }
   }
 }
@@ -83,7 +101,7 @@ export default {
 }
 
 .product img {
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   height: 250px;
   width: 200px;
   object-fit: cover;
@@ -93,14 +111,14 @@ export default {
   display: flex;
   justify-content: left;
   margin-bottom: 5px;
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   height: 100px;
   width: 100px;
   object-fit: cover;
 }
 
 .image{
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   height: 50px;
   width: 50px;
   margin-left: 50px;
@@ -147,5 +165,12 @@ button {
 
 .auto {
   margin-left: auto;
+}
+
+table, th, td {
+  border-bottom: 1px solid black;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
 }
 </style>

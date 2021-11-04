@@ -1,34 +1,63 @@
-
 <template>
 <div class="wrapper">
   <div class="products">
-    <div class="product" v-for="(product, index) in products" :key="product.id">
-      <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
-      </div>
-      <div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>
-      <div class="price">
-        <h2>{{product.price}}</h2>
-        <button class="auto" @click="removeFromCart(index)">Remove from Cart</button>
-      </div>
-      <div class="price">
-        <button class="auto" @click="product.quantity--"> Minus Quantity </button>
-        <h2>{{product.quantity}}</h2>
-        <button class="auto" @click="product.quantity++"> Plus Quantity</button>
-      </div>
-    </div>
-  </div>
-</div>
-</template> 
+    <table id=playerTable>
+      <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Team</th>
+          <th>Total Points</th>
+          <th>Add to Team</th>
+         </tr>
+       </thead>
+         <tbody>
+          <tr v-for="product in products" :key="product.id">
+          <div class="imageContainer">
+           <td class="image">
+             <img :src="'/images/products/'+product.image">
+           </td>
+           </div>
+           <td>{{product.name}}</td>
+           <td>{{product.Position}}</td>
+           <td>{{product.Team}}</td>
+           <td>{{product.Stat}}</td>
+           <td>
+        <button class="auto" @click="removeFromCart(index)">Drop</button>
+           </td>
+          </tr>
+        <tr>
+           <td>Total Points:</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td>{{totalScore}}</td>
+           <td>
+           </td>
+          </tr>
+          
+         </tbody>
+    </table>    
+  </div> 
+</div> 
+</template>
 
 <script>
 export default {
   name: 'Cart',
   props: {
     products: Array
+  },
+  computed: {
+    totalScore(){
+      let total = 0;
+      for(let i = 0; i < this.$root.$data.cart.length; i++){
+        total += this.$root.$data.cart[i].Stat;
+      }
+      total = Math.round(total);
+      return total;
+    }
   },
   methods: {
       removeFromCart(index) {
@@ -59,9 +88,27 @@ export default {
 }
 
 .product img {
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   height: 250px;
   width: 200px;
+  object-fit: cover;
+}
+
+.imageContainer img{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+  /* border: 2px solid #333; */
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.image{
+  /* border: 2px solid #333; */
+  height: 50px;
+  width: 50px;
+  margin-left: 50px;
   object-fit: cover;
 }
 
@@ -105,6 +152,13 @@ button {
 
 .auto {
   margin-left: auto;
+}
+
+table, th, td {
+  border-bottom: 1px solid black;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
 }
 </style>
 
